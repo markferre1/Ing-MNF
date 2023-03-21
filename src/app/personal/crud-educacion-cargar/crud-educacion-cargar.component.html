@@ -1,0 +1,24 @@
+<div class="container">
+  <h1 class="tiuloInicio">Cargar Educacion</h1>
+</div>
+<form>
+  <div class="me-3">
+    <label for="exampleInputEmail1" class="form-label">Institucion</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="institucion" [(ngModel)]="educacionFormulario.institucion">
+  </div>
+  <div class="me-3">
+    <label for="exampleInputPassword1" class="form-label">Titulo</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="titulo" [(ngModel)]="educacionFormulario.titulo">
+  </div>
+  <div class="me-3">
+    <label for="exampleInputEmail1" class="form-label">Inicio</label>
+    <input type="text" class="form-control" id="exampleInputFecha" name="fecha" [(ngModel)]="educacionFormulario.fecha">
+  </div>
+  <div class="me-3">
+    <label for="exampleInputPassword1" class="form-label">Fin</label>
+    <input type="text" class="form-control" id="exampleInputFin" name="fin" [(ngModel)]="educacionFormulario.fin">
+  </div>
+    <button type="submit" class="btn-alert" (click)="onEnviar()" *ngIf="!educacionFormulario.id">Guardar</button>
+    <button type="submit" class="btn-alert" (click)="onActualizar()" *ngIf="educacionFormulario.id">Actualizar</button>
+    <a class="nav-link" href="/edit">Volver</a>
+</form>

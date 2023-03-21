@@ -1,0 +1,17 @@
+<section class="content" id="about">
+
+    <div class="block-content">
+     <div>
+        <h3 class="block-title">Skills</h3>
+        <div *ngFor="let dato of cv.skins">
+        <label class="progress-bar-label">{{dato.nombre}}</label>
+        <div class="progress">
+            <div [style.width.%]="dato.valor" class="progress-bar" role="progressbar" attr.aria-valuenow="{{dato.valor}}" aria-valuemin="0" aria-valuemax="100">
+                <span>{{dato.valor}}%</span>
+            </div>
+        </div>
+       </div>
+     </div>
+    </div>
+
+</section>

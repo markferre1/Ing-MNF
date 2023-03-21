@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="tiuloInicio">Cargar Skins</h1>
+</div>
+<form>
+  <div class="me-3">
+    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" [(ngModel)]="skinsformulario.nombre">
+  </div>
+  <div class="me-3">
+    <label for="exampleInputPassword1" class="form-label">Valor</label>
+    <input type="text" class="form-control" id="exampleInputPassword1" name="valor" [(ngModel)]="skinsformulario.valor">
+  </div>
+    <button type="submit" class="btn-alert" (click)="onEnviar()" *ngIf="!skinsformulario.id">Guardar</button>
+    <button type="submit" class="btn-alert" (click)="onActualizar()" *ngIf="skinsformulario.id">Actualizar</button>
+    <a class="nav-link" href="/edit">Volver</a>
+</form>

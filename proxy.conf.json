@@ -1,0 +1,7 @@
+{
+    "/api/*":{
+        "target":"https://cvcompletar1.herokuapp",
+        "secure":false,
+        "logLevel":"debug"
+    }
+}

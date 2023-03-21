@@ -1,0 +1,50 @@
+<h3>Datos Personales</h3>
+<div class="inline-content">
+  <label>Editar Datos Personales ...............</label>
+<button *ngFor="let dato of cv.datos" type="button" class="btn-warning bi bi-pencil btn-circle" [routerLink]="['/crud/datos',dato.id]" ></button>
+</div>
+
+<table class="table ma-3">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Dato</th>
+      <th scope="col">Valor</th>
+    </tr>
+ </thead>
+  <tbody>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Nombre</th>
+      <td>{{dato.nombre}}</td>
+    </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Direccion</th>
+      <td>{{dato.direccion}}</td>      
+   </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Telefono</th>
+      <td>{{dato.telefono}}</td>      
+   </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">e-mail</th>
+      <td>{{dato.mail}}</td>      
+    </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Interes</th>
+      <td>{{dato.interes}}</td>      
+    </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Disponibilidad</th>
+      <td>{{dato.disponibilidad}}</td>      
+    </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Especialidad</th>
+      <td>{{dato.especialidad}}</td>      
+   </tr>
+    <tr *ngFor="let dato of cv.datos">
+      <th scope="col">Objetivo</th>
+      <td>{{dato.objetivo}}</td>
+    </tr>
+  </tbody>
+</table>
+
+

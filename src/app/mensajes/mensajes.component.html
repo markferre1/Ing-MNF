@@ -1,0 +1,27 @@
+<h3>Listado de Mensajes Recibidos</h3>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Correo Electronico</th>
+        <th scope="col">Mensaje</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mensaje of cv.formulario">
+        <td>{{mensaje.nombre}}</td>
+        <td>{{mensaje.mail}}</td>
+        <td>{{mensaje.mensaje}}</td>
+        <td><button (click)="Borrar(mensaje.id)" type="button" class="btn-danger bi bi-trash btn-circle"></button>
+
+      </tr>
+    </tbody>
+  </table>
+
+
+ <!-- <a target="_blank" href="/porfolio" class="btn btn-download">Porfolio</a>-->
+
+
+
+

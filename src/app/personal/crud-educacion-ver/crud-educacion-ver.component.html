@@ -1,0 +1,24 @@
+<h3>Listado Educacion</h3>
+<a class="nav-link btn" href="/crud/educacion">Cargar Nueva Educacion</a>
+<table class="table ma-3">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Institucion</th>
+      <th scope="col">Titulo</th>
+      <th scope="col">Inicio</th>
+      <th scope="col">Fin</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let edu of cv.educacion">
+      <td>{{edu.institucion}}</td>
+      <td>{{edu.titulo}}</td>
+      <td>{{edu.fecha}}</td>
+      <td>{{edu.fin}}</td>
+      <td><button type="button" class="btn-warning bi bi-pencil btn-circle" [routerLink]="['/crud/educacion',edu.id]" ></button>
+      <td><button (click)="educacionBorrar(edu.id)" type="button" class="btn-danger bi bi-trash btn-circle"></button>
+    </tr>
+  </tbody>
+</table>

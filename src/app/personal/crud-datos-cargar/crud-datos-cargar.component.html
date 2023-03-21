@@ -1,0 +1,40 @@
+<div class="container">
+    <h1 class="tiuloInicio">Cargar Datos</h1>
+  </div>
+  <form>
+    <div class="me-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="nombre" [(ngModel)]="datos.nombre">
+    </div>
+    <div class="me-3">
+      <label for="exampleInputEmail1" class="form-label">Direccion</label>
+      <input type="text" class="form-control" id="exampleInputFecha" name="direccion" [(ngModel)]="datos.direccion">
+    </div>
+    <div class="me-3">
+        <label for="exampleInputPassword1" class="form-label">Telefono</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" name="telefono" [(ngModel)]="datos.telefono">
+      </div>
+      <div class="me-3">
+        <label for="exampleInputEmail1" class="form-label">Mail</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="mail" [(ngModel)]="datos.mail">
+      </div>
+      <div class="me-3">
+        <label for="exampleInputEmail1" class="form-label">Interes</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" name="interes" [(ngModel)]="datos.interes">
+      </div>
+      <div class="me-3">
+        <label for="exampleInputEmail1" class="form-label">Disponibilidad</label>
+        <input type="text" class="form-control" id="exampleInputFecha" name="disponibilidad" [(ngModel)]="datos.disponibilidad">
+      </div>
+      <div class="me-3">
+          <label for="exampleInputPassword1" class="form-label">Especialidad</label>
+          <input type="text" class="form-control" id="exampleInputPassword1" name="especialidad" [(ngModel)]="datos.especialidad">
+        </div>
+        <div class="me-3">
+            <label for="exampleInputPassword1" class="form-label">Objetivo</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" name="objetivo" [(ngModel)]="datos.objetivo">
+          </div>   
+      <button type="submit" class="btn-alert" (click)="onEnviar()" *ngIf="!datos.id">Guardar</button>
+      <button type="submit" class="btn-alert" (click)="onActualizar()" *ngIf="datos.id">Actualizar</button>
+      <a class="nav-link" href="/edit">Volver</a>
+  </form>

@@ -1,0 +1,15 @@
+.azul {
+  color:black;
+  background-color: rgba(164, 165, 167, 0.816);
+  }
+  .verde {
+  color:black;
+  background-color: rgb(231, 234, 231);
+  }
+  .table pr-5 {
+    padding-right: 3rem!important;
+}
+.verdetitulo {
+  color:rgb(23, 29, 23);
+  background-color: rgba(107, 179, 113, 0.816);
+  }

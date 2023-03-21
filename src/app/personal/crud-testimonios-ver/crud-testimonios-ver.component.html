@@ -1,0 +1,22 @@
+<h3>Listado Cursos</h3>
+<a class="nav-link btn" href="/crud/testimonios">Cargar Nuevo Curso</a>
+<table class="table ma-3">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Institución</th>
+      <th scope="col">Curso</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Editar</th>
+      <th scope="col">Eliminar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let testi of cv.testimonio">
+      <td>{{testi.institucion}}</td>
+      <td>{{testi.titulo}}</td>      
+      <td>{{testi.fecha}}</td>
+      <td><button type="button" class="btn-warning bi bi-pencil btn-circle" [routerLink]="['/crud/testimonios',testi.id]" ></button>
+      <td><button (click)="testimoniosBorrar(testi.id)" type="button" class="btn-danger bi bi-trash btn-circle"></button>
+    </tr>
+  </tbody>
+</table>

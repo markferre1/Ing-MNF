@@ -1,0 +1,48 @@
+<section class="content" id="about">
+    
+    
+    <div class="block-content">
+      <div>  
+        <h3 class="block-title">Experiencia Laboral</h3>
+        <div *ngFor="let dato of cv.experiencia">
+        <div class="timeline experience">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="exp-holder">                          
+                        <div class="exp">
+                            <div class="hgroup">
+                                <h4><span>{{dato.empresa}}</span></h4>
+                                <h5>{{dato.fecha}} - <span class="current">{{dato.fin}}</span></h5>
+                            </div>
+                            <p>{{dato.descripcion}}</p>
+                        </div>                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div> 
+    </div>   
+    
+    <div class="block-content">
+        <div> 
+        <h3 class="block-title">Trabajos Particulares</h3>
+        <div *ngFor="let dato of cv.servicio">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 service">
+               <!-- <div class="service-icon">
+                    <i class={{dato.icono}}></i>
+                </div>-->
+                <h4>{{dato.nombre}}</h4>
+                <p>{{dato.obra}}</p>
+                <h6>{{dato.fecha}}</h6>
+                <hr>
+                    
+            </div>   
+        </div>
+    </div>
+    </div>
+    </div>
+    
+    
+</section>

@@ -1,0 +1,35 @@
+
+<div class="mt-3 mb-1 pb-5 pl-5">
+  <button class="btn-alert mb-5"><a target="_blank" href="/porfolio" class="btn-email">Porfolio</a></button>
+  <button type="button" class="btn-alert mb-5" (click) = activarComponente(0) >Mensajes</button>
+  <button type="button" class="btn-alerr mb-5" (click) = activarComponente(1)>Skins</button>
+  <button type="button" class="btn-alert mb-5" (click) = activarComponente(2)>Educacion</button>
+  <button type="button" class="btn-alert mb-5" (click) = activarComponente(3)>Experiencia</button>
+  <button type="button" class="btn-alert mb-5" (click) = activarComponente(4)>Servicios</button>
+  <button type="button" class="btn-alert mb-5" (click) = activarComponente(5)>Testimonios</button>
+  <button type="button" class="btn-alert mb-5" (click) = activarComponente(6)>Datos</button>
+
+  <br>
+    <div *ngIf="option == 0">
+      <app-mensajes></app-mensajes>
+    </div>
+    <div *ngIf="option == 1">
+      <app-crud-skins-ver></app-crud-skins-ver>
+    </div>
+    <div *ngIf="option == 2">
+      <app-crud-educacion-ver></app-crud-educacion-ver>
+    </div>
+    <div *ngIf="option == 3">
+      <app-crud-experiencia-ver></app-crud-experiencia-ver>
+    </div>
+    <div *ngIf="option == 4">
+      <app-crud-servicios-ver></app-crud-servicios-ver>
+    </div>
+    <div *ngIf="option == 5">
+      <app-crud-testimonios-ver></app-crud-testimonios-ver>
+    </div>
+    <div *ngIf="option == 6">
+      <app-crud-datos-ver></app-crud-datos-ver>
+    </div>
+
+    
